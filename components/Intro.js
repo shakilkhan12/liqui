@@ -11,12 +11,13 @@ const Intro = () => {
         <div className="w-full lg:w-5/12">
           <div className="bg-gradient-to-b from-[#066C9C] via-[#01ADED] to-[#010319] rounded-[20px] overflow-hidden relative p-[1px]">
             <div className="bg-gradient-to-b from-[#132542] to-[#010319] rounded-[20px] p-4">
-              <Image
-                className="mx-auto"
-                src="/images/electron.png"
-                width={363}
-                height={412}
-              />
+              <div className="relative w-[250px] md:w-[363px] h-[250px] md:h-[412px] mx-auto">
+                <Image
+                  src="/images/electron.png"
+                  fill
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -26,11 +27,13 @@ const Intro = () => {
               backgroundImage:
                 "linear-gradient(to right, #066C9C 0%, #066C9C 10%, #00E1D2 50%)",
             }}
-            className=" bg-clip-text text-[26px] font-medium text-transparent"
+            className=" bg-clip-text text-[26px] font-medium text-transparent inline-block relative"
           >
             INTRODUCING lIQUI FLX
+            <span className="absolute -bottom-1 left-0 w-full h-[.5px] bg-gray-800"></span>
+            <span className="absolute -bottom-1 left-0 w-10 h-[.5px] bg-[#01ADED]"></span>
           </h2>
-          <h1 className="text-white text-[36px] md:text-[48px] leading-[43px] md:leading-[55px] mt-4 font-medium w-full xl:w-[80%]">
+          <h1 className="text-white text-[30px] md:text-[48px] leading-[43px] md:leading-[55px] mt-4 font-medium w-full xl:w-[80%]">
             Spot and Leverage Trading
           </h1>
           <p className="text-white text-lg mt-4">

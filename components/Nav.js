@@ -10,8 +10,17 @@ const Nav = () => {
   return (
     <nav className="w-full bg-[#113253]/30 relative">
       <div className="max-w-[1240px] mx-auto w-full px-5 h-[100px] flex items-center justify-between space-x-5">
-        <Link href="/">
-          <Image src="/images/logo.png" width={47} height={60} alt="logo" />
+        <Link href="/" className="flex items-center gap-5">
+          <Image src="/images/footer-logo.png" width={55} height={55} />
+          <h2
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, #066C9C 0%, #066C9C 10%, #00E1D2 50%)",
+            }}
+            className=" bg-clip-text text-[24px] font-bold text-transparent relative inline-block uppercase"
+          >
+            liquiflx
+          </h2>
         </Link>
         {/* desktop links */}
         <ul className="hidden md:flex items-center space-x-[66px]">
@@ -42,7 +51,7 @@ const Nav = () => {
         </ul>
         {/* mobile links */}
         {toggle && (
-          <ul className="z-[999999] bg-[#1E1E1E] pb-5 flex md:hidden flex-col w-full absolute right-0 top-full ">
+          <ul className="z-[999999] bg-[#010319] pb-5 flex md:hidden flex-col w-full absolute right-0 top-full ">
             <Link
               href="/"
               className="text-lg font-normal hover:bg-[#113253]/30 px-5 py-3 block w-full text-white capitalize focus:text-white hover:text-white transition-all duration-300 hover:pl-7"
