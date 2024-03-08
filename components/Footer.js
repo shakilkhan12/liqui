@@ -97,6 +97,7 @@ const Footer = () => {
                   <div className="mt-5">
                     {link.links.map((item) => (
                       <Link
+                        key={item.id}
                         href=""
                         className="block text-sm mt-1 text-[#dbdbdb] font-normal"
                       >

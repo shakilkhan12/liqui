@@ -1,12 +1,23 @@
 "use client";
 
+import web3 from "@/utils/walletConnection";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
+  const [accounts, setAccounts] = useState([]);
+  useEffect(() => {
+    const getAccounts = async () => {
+      const accounts = await web3.eth.getAccounts();
+      setAccounts(accounts);
+    };
+
+    getAccounts();
+  }, []);
+  console.log(accounts);
   return (
     <nav className="w-full bg-[#113253]/30 relative">
       <div className="max-w-[1240px] mx-auto w-full px-5 h-[100px] flex items-center justify-between space-x-5">
