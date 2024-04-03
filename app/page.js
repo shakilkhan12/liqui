@@ -12,8 +12,8 @@ export default function Home() {
     <main>
       <Nav />
       <Banner />
-      <Companies />
       <div className="bg-[url('/images/bg.png')] bg-cover w-full h-full bg-no-repeat">
+        <Companies />
         <Cards />
         <Intro />
         <Work />
