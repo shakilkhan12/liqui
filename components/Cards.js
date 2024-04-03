@@ -25,14 +25,14 @@ const Cards = () => {
   ]);
   return (
     <div className="relative text-white">
-      <div className="absolute left-0 top-0 w-full xl:w-[1170px] h-[645px] -z-[999]">
+      {/* <div className="absolute left-0 top-0 w-full xl:w-[1170px] h-[645px] -z-[999]">
         <Image
           src="/images/line.png"
           fill
           className="w-full h-full object-contain"
           alt="line"
         />
-      </div>
+      </div> */}
       <Wrapper>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 py-[173px]">
           {data?.map((item) => (

@@ -13,10 +13,13 @@ export default function Home() {
       <Nav />
       <Banner />
       <Companies />
-      <Cards />
-      <Intro />
-      <Work />
-      <News />
+      <div className="bg-[url('/images/bg.png')] bg-cover w-full h-full bg-no-repeat">
+        <Cards />
+        <Intro />
+        <Work />
+        <News />
+      </div>
+
       <Footer />
     </main>
   );
